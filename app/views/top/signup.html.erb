@@ -1,0 +1,8 @@
+<h1>登録画面</h1>
+<%= form_tag '/top/signup', method: :post, data: { turbo: false } do %>
+    <%= label_tag :uid, 'ユーザーID' %>
+    <%= text_field_tag :uid %>
+    <%= label_tag :pass, 'パスワード' %>
+    <%= password_field_tag :pass %>
+    <%= submit_tag '登録' %>
+<% end %>
