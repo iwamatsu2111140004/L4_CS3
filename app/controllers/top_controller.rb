@@ -9,14 +9,13 @@ class TopController < ApplicationController
   end
 
   def login
-    if User.find_by(uid: params[:uid]) 
-      signup_password = BCrypt::Password.create(params[:pass])
-      if BCrypt::Password.new(signup_password) == params[:pass]
-        session[:login_uid] = params[:uid]
-        redirect_to top_main_path
-      else
-        render "error"
-      end
+    #logger.debug("aaaaaaaaaaa")
+    #logger.debug(User.where(id: params[:id]).pluck(:pass))
+    user = User.find_by(uid: params[:uid])
+    #user.pass = BCrypt::Password.create(パスワードの文字列)
+    if user && BCrypt::Password.new(user.pass) == params[:pass]
+      session[:login_uid] = params[:uid]
+      redirect_to top_main_path
     else
       render "error"
     end
