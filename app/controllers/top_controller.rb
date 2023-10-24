@@ -7,7 +7,7 @@ class TopController < ApplicationController
       render "login"
     end
   end
-
+  
   def login
     user = User.find_by(uid: params[:uid])
     if user && BCrypt::Password.new(user.pass) == params[:pass]
