@@ -26,7 +26,7 @@ production:
   encoding: unicode
   pool: 5
   # database: db/production.sqlite3
-  database: test_render_wvgh
-  username: test_render_wvgh_user
+  database: l4_cs3
+  username: l4_cs3_user
   password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
