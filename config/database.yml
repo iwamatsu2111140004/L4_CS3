@@ -26,7 +26,7 @@ production:
   encoding: unicode
   pool: 5
   # database: db/production.sqlite3
-  database: l4_cs3
-  username: l4_cs3_user
+  database: l4_cs3_aaa
+  username: l4_cs3_aaa_user
   password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
